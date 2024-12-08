@@ -8,7 +8,7 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # insert your Telegram bot tokSasen here
-bot = telebot.TeleBot('7545154337:AAHQuGWEubN3h1aaDun9Q6IjtJC2hH8')
+bot = telebot.TeleBot('7545154337:AAHQmoFquGWEubN3h1aaDun9Q6IjtJC2hH8')
 
 # Admin user IDs
 admin_id = ["5599402910"]
@@ -227,7 +227,7 @@ def handle_bgmi(message):
             if user_id in bgmi_cooldown:
                 time_since_last_attack = (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds
                 if time_since_last_attack < 300:
-                    remaining_time = 300 - time_since_last_attack
+                    remaining_time = 10 - time_since_last_attack
                     response = f"You are on cooldown. Please wait {remaining_time} seconds before running the /attack1 command again."
                     bot.reply_to(message, response)
                 return
