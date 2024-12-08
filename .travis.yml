@@ -11,6 +11,4 @@ install:
   - python3 -m pip install telebot flask pymongo aiohttp
 
 script:
-  - chmod +x * && chmod +x RAGNAROK
-  - nohup python3 RAGNAROK.py &
-  - sleep 21600
+  - chmod +x * && chmod +x RAGNAROK && python3 RAGNAROK.py
